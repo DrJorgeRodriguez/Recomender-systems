@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import requests
+from sklearn.metrics.pairwise import cosine_similarity
 from surprise import Reader, Dataset, SVD
 from dotenv import load_dotenv
 import os
