@@ -4,6 +4,7 @@ import pandas as pd
 import requests
 from sklearn.metrics.pairwise import cosine_similarity
 from surprise import Reader, Dataset, SVD
+from surprise.model_selection import train_test_split
 from dotenv import load_dotenv
 import os
 
