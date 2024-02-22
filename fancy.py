@@ -1,14 +1,10 @@
 #================IMPORTING LIBRARIES================
-import requests
-import pandas as pd
-import numpy as np
 import streamlit as st
-from sklearn.metrics.pairwise import cosine_similarity
-from surprise import SVD, Reader, Dataset
-from surprise.model_selection import train_test_split
+import pandas as pd
+import requests
+from surprise import Reader, Dataset, SVD
 from dotenv import load_dotenv
 import os
-
 
 
 
