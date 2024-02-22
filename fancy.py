@@ -61,10 +61,10 @@ st.markdown("""
 @st.cache_data  # Cache the function to prevent repeated API calls
 def get_movie_details(title, movies_df):
     filtered_df = movies_df.loc[movies_df['title'] == title, 'tmdbId']
-    load_dotenv()
+    #load_dotenv()
     if not filtered_df.empty:
         tmdbId = filtered_df.iloc[0]
-        api_key = os.getenv('api_key') # Your TMDb API key
+        api_key = st.secrets['API_KEY'] # Your TMDb API key
         try:
             response = requests.get(f'https://api.themoviedb.org/3/movie/{tmdbId}?api_key={api_key}')
             if response.status_code == 200:
